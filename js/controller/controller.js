@@ -35,19 +35,6 @@ export function isiRowPolyline(value) {
     }
 }
 
-// export function MakeGeojsonFromAPI(value) {
-//     // Create a GeoJSON feature collection
-//     const geojsonFeatureCollection = {
-//         type: "FeatureCollection",
-//         features: value
-//     };
-
-//     // Convert the GeoJSON feature collection to a JSON string
-//     const geojsonString = JSON.stringify(geojsonFeatureCollection, null, 2);
-
-//     // Return the JSON string
-//     return geojsonString;
-// }
 
 export function MakeGeojsonFromAPI(value) {
     const geojsonFeatureCollection = {
@@ -65,9 +52,8 @@ export function MakeGeojsonFromAPI(value) {
 
     const link = document.createElement("a");
     link.href = url;
-    // link.download = fileName || "data.geojson"; 
 
-    // document.body.appendChild(link);
+    
 
     return link;
 }
@@ -91,7 +77,7 @@ export function AddLayerToMAP(geojson) {
         source: Sourcedata,
         style: new ol.style.Style({
             image: new ol.style.Icon({
-                src: 'img/icog.png',
+                src: 'images/icog.png',
                 scale: 0.5,
                 opacity: 1
             })
@@ -107,7 +93,7 @@ export function AddLayerToMAP(geojson) {
             if (featureType === 'Polygon') {
                 return new ol.style.Style({
                     stroke: new ol.style.Stroke({
-                        color: 'blue',
+                        color: 'red',
                         width: 2
                     })
                 });
@@ -115,7 +101,7 @@ export function AddLayerToMAP(geojson) {
 
                 return new ol.style.Style({
                     stroke: new ol.style.Stroke({
-                        color: 'red',
+                        color: 'blue',
                         width: 3
                     })
                 });
