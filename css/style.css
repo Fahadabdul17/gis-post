@@ -13,6 +13,27 @@ body {
         margin: 0 auto; 
     }
 
+    /* Styling Button Hapus */
+#hapusbutton {
+  background-color: #ff0000; /* Merah */
+  color: #fff; /* Warna teks putih */
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Styling Button Hitung COG */
+#hitungcogbutton {
+  background-color: #3498db; /* Biru muda */
+  color: #fff; /* Warna teks putih */
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+
     .intro {
       background-color: #f2f2f2;
       padding: 20px;
@@ -131,4 +152,22 @@ td:last-child {
 /* Hover Effect on Table Rows */
 tr:hover {
   background-color: #ddd;
+}
+
+th.name,
+td.name {
+  width: 100px; /* Adjust the width as needed */
+  white-space: normal; /* Enable text wrapping */
+}
+
+th.coordinate,
+td.coordinate {
+  width: 50px; /* Adjust the width for the Coordinate column */
+  white-space: normal; /* Enable text wrapping */
+}
+
+th.type,
+td.type {
+  width: 100px; /* Adjust the width as needed */
+  white-space: normal; /* Enable text wrapping */
 }
