@@ -1,0 +1,134 @@
+@import "https://cdn.skypack.dev/ol/ol.css";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+
+    #map {
+        width: 100%; 
+        height: 400px; 
+        margin: 0 auto; 
+    }
+
+    .intro {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  font: 0.9em sans-serif;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 280px;
+}
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+/* Styling Container .intro */
+.intro {
+  background-color: #333; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  padding: 20px; /* Ruang dalam kontainer */
+  text-align: center; /* Tengah teks */
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan lebih lembut */
+}
+
+/* Styling Heading (h3) inside .intro */
+.intro h3 {
+  font-size: 24px; /* Ukuran font */
+  margin: 10px 0; /* Ruang atas dan bawah */
+}
+
+/* Styling Table Container */
+#info-table {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Styling Each Table */
+.point-table, .polygon-table, .polyline-table {
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top; /* Mengatur posisi vertikal ke atas */
+}
+
+/* Styling Table Header (thead) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan lebih lembut */
+}
+
+/* Styling Table Header Cells (th) */
+th {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Styling Table Body Rows (tr) */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Styling Table Data Cells (td) */
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styling Table Data Cells (td) for Type Column */
+td:last-child {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Hover Effect on Table Rows */
+tr:hover {
+  background-color: #ddd;
+}
