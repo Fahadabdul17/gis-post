@@ -23,12 +23,22 @@ export function onSubmitMarkerClick() {
     let lat = getValue('lat');
     let name = getValue('name');
     let volume = getValue('volume');
-    let data = {long,lat,volume};
-    postWithToken("https://eoqc0wqfm9sjc6y.m.pipedream.net","Token","dsf9ygf87h98u479y98dj0fs89nfd7",data,afterSubmitCOG);
-    overlay.setPosition(undefined);
-    textBlur('popup-closer');
+    let type = getValue('type');
+    let data = {
+      "type" : type,
+      "name" : name,
+      "volume" : volume,
+      "coordinates" : [
+        parseFloat(long),parseFloat(lat)
+      ]
+    };
+    postWithToken("https://us-central1-fahad-402509.cloudfunctions.net/gispostloc:","Token","dsf9ygf87h98u479y98dj0fs89nfd7",data,afterSubmitCOG);
+  overlay.setPosition(undefined);
+  textBlur('popup-closer');
     insertMarker(name,long,lat,volume);
     idmarker.id=idmarker.id+1;
+  console.log(name)
+
 }
 
 function afterSubmitCOG(result){

@@ -1,4 +1,5 @@
 export let URLGeoJson = "https://us-central1-fahad-402509.cloudfunctions.net/gis-gcf";
+export let urlPostGCF = "https://us-central1-fahad-402509.cloudfunctions.net/gispostloc";
 export let tableTag = "tr";
 export let tableRowClass = "content is-small";
 export let tableTemplate = `

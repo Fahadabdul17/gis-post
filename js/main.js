@@ -16,37 +16,46 @@ onClick('hitungcogbutton',getAllCoordinates);
 map.on('click', onMapClick);
 map.on('pointermove', onMapPointerMove);
 map.on('movestart', disposePopover);
-    
+
 get(URLGeoJson,data => {
     responseData(data)
     let link = MakeGeojsonFromAPI(data)
     // console.log(link)
     // console.log(geojson)
     AddLayerToMAP(link)
-    const typeSelect = document.getElementById('type');
+    // drawer(link)
+}); 
     
-    let draw; // global so we can remove it later
-    function addInteraction() {
-        const value = typeSelect.value;
-        if (value !== 'None') {
-            draw = new Draw({
-                source: link,
-                type: typeSelect.value,
-            });
-            map.addInteraction(draw);
-        }
-    }
+// get(URLGeoJson,data => {
+//     responseData(data)
+//     let link = MakeGeojsonFromAPI(data)
+    // console.log(link)
+    // console.log(geojson)
+    // AddLayerToMAP(link)
+    // const typeSelect = document.getElementById('type');
+    
+    // let draw; 
+    // function addInteraction() {
+    //     const value = typeSelect.value;
+    //     if (value !== 'None') {
+    //         draw = new Draw({
+    //             source: link,
+    //             type: typeSelect.value,
+    //         });
+    //         map.addInteraction(draw);
+    //     }
+    // }
     
     /**
      * Handle change event.
     */
-    typeSelect.onchange = function () {
-    map.removeInteraction(draw);
-    addInteraction();
-    };
+//     typeSelect.onchange = function () {
+//     map.removeInteraction(draw);
+//     addInteraction();
+//     };
     
-    document.getElementById('undo').addEventListener('click', function () {
-        draw.removeLastPoint();
-    });
-    addInteraction();
-}); 
+//     document.getElementById('undo').addEventListener('click', function () {
+//         draw.removeLastPoint();
+//     });
+//     addInteraction();
+// }); 
